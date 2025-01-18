@@ -26,6 +26,7 @@
 
     --mobile-font-size-heading_xl: 60px;
     --mobile-font-size-heading_l: 50px;
+    --mobile-font-size-heading_m: 32px;
     --mobile-font-size-body_m: 18px;
     --mobile-font-size-body_s: 16px;
 
@@ -41,6 +42,7 @@
 
     --mobile-line-height-heading_xl: 55px;
     --mobile-line-height-heading_l: 45px;
+    --mobile-line-height-heading_m: 32px;
     --mobile-line-height-body_m: 28px;
     --mobile-line-height-body_s: 26px;
 
