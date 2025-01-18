@@ -1,0 +1,51 @@
+:root {
+
+    /* Colors */
+    --gold-color: #d5966c;
+    --almost-black-color: #151515;
+    --white-color: #ffffff;
+    --dark-gray-color: #444444;
+
+    /* Fonts */
+    --big-shoulders-display-font: 'Big Shoulders Display', serif, sans-serif;
+    --outfit-font: 'Outfit', serif, sans-serif;
+
+    /* Font weights */
+    --font-weight-black: 900;
+    --font-weight-extrabold: 800;
+    --font-weight-light: 300;
+
+
+    /* Font sizes */
+    --desktop-font-size-heading_xl: 96px;
+    --desktop-font-size-heading_l: 70px;
+    --desktop-font-size-heading_m: 60px;
+    --desktop-font-size-heading_s: 36px;
+    --desktop-font-size-body_m: 22px;
+    --desktop-font-size-body_s: 18px;
+
+    --mobile-font-size-heading_xl: 60px;
+    --mobile-font-size-heading_l: 50px;
+    --mobile-font-size-body_m: 18px;
+    --mobile-font-size-body_s: 16px;
+
+    --link-font-size: 20px;
+
+    /* Line heights */
+    --desktop-line-height-heading_xl: 88px;
+    --desktop-line-height-heading_l: 70px;
+    --desktop-line-height-heading_m: 50px;
+    --desktop-line-height-heading_s: 36px;
+    --desktop-line-height-body_m: 32px;
+    --desktop-line-height-body_s: 28px;
+
+    --mobile-line-height-heading_xl: 55px;
+    --mobile-line-height-heading_l: 45px;
+    --mobile-line-height-body_m: 28px;
+    --mobile-line-height-body_s: 26px;
+
+    --link-line-height: auto;
+
+    /* letter spacing */
+    --link-letter-spacing: 3.64px;
+}

@@ -1,0 +1,332 @@
+/***
+    The new CSS reset - version 1.11.3 (last updated 25.08.2024)
+    GitHub page: https://github.com/elad2412/the-new-css-reset
+***/
+
+/*
+    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+    - The "symbol *" part is to solve Firefox SVG sprite bug
+    - The "html" element is excluded, otherwise a bug in Chrome breaks the CSS hyphens property (https://github.com/elad2412/the-new-css-reset/issues/36)
+ */
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+    all: unset;
+    display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Fix mobile Safari increase font-size on landscape mode */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Reapply the pointer cursor for anchor tags */
+a,
+button {
+    cursor: revert;
+}
+
+/* Remove list styles (bullets/numbers) */
+ol,
+ul,
+menu,
+summary {
+    list-style: none;
+}
+
+/* Firefox: solve issue where nested ordered lists continue numbering from parent (https://bugzilla.mozilla.org/show_bug.cgi?id=1881517) */
+ol {
+    counter-reset: revert;
+}
+
+/* For images to not be able to exceed their container */
+img {
+    max-inline-size: 100%;
+    max-block-size: 100%;
+}
+
+/* removes spacing between cells in tables */
+table {
+    border-collapse: collapse;
+}
+
+/* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
+input,
+textarea {
+    -webkit-user-select: auto;
+}
+
+/* revert the 'white-space' property for textarea elements on Safari */
+textarea {
+    white-space: revert;
+}
+
+/* minimum style to allow to style meter element */
+meter {
+    -webkit-appearance: revert;
+    appearance: revert;
+}
+
+/* preformatted text - use only for this feature */
+:where(pre) {
+    all: revert;
+    box-sizing: border-box;
+}
+
+/* reset default text opacity of input placeholder */
+::placeholder {
+    color: unset;
+}
+
+/* fix the feature of 'hidden' attribute.
+   display:revert; revert to element instead of attribute */
+:where([hidden]) {
+    display: none;
+}
+
+/* revert for bug in Chromium browsers
+   - fix for the content editable attribute will work properly.
+   - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element*/
+:where([contenteditable]:not([contenteditable="false"])) {
+    -moz-user-modify: read-write;
+    -webkit-user-modify: read-write;
+    overflow-wrap: break-word;
+    -webkit-line-break: after-white-space;
+    -webkit-user-select: auto;
+}
+
+/* apply back the draggable feature - exist only in Chromium and Safari */
+:where([draggable="true"]) {
+    -webkit-user-drag: element;
+}
+
+/* Revert Modal native behavior */
+:where(dialog:modal) {
+    all: revert;
+    box-sizing: border-box;
+}
+
+/* Remove details summary webkit styles */
+::-webkit-details-marker {
+    display: none;
+}
+
+font {
+    font-optical-sizing: auto;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    width: 375px;
+    margin: 0 auto;
+}
+
+.title {
+    font-family: var(--big-shoulders-display-font);
+    font-weight: var(--font-weight-black);
+    text-transform: uppercase;
+    color: var(--almost-black-color);
+}
+
+.text {
+    font-family: var(--outfit-font);
+    font-weight: var(--font-weight-light);
+    font-size: var(--mobile-font-size-body_m);
+    color: var(--dark-gray-color);
+}
+
+
+.section_top {
+    margin-bottom: 120px;
+}
+
+.section_top__background-img,
+.section_top__title,
+.section_top__text {
+    margin-bottom: 32px;
+}
+
+.section_top__background-img {
+    background-image: url(../assets/mobile/image-hero@2x.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 240px;
+}
+
+.section_top__description {
+    width: 343px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.section_top__title {
+    font-size: var(--mobile-font-size-heading_xl);
+    line-height: var(--mobile-line-height-heading_xl);
+}
+
+.section_top__text {
+    line-height: var(--mobile-line-height-body_m);
+}
+
+.section_top__location {
+    width: 260px;
+    height: 72px;
+    display: flex;
+    flex-direction: row;
+}
+
+.section_top__link {
+    font-family: var(--big-shoulders-display-font);
+    font-size: var(--link-font-size);
+    font-weight: var(--font-weight-extrabold);
+    line-height: var(--link-line-height);
+    letter-spacing: var(--link-letter-spacing);
+    width: 204px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    color: var(--white-color);
+    background-color: var(--almost-black-color);
+}
+
+.section_top__arrow {
+    background-color: var(--gold-color);
+    width: 56px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section_secondary,
+.section_third {
+    width: 343px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.section_secondary {
+    margin-bottom: 32px;
+}
+
+.section_secondary__background-img {
+    background-image: url(../assets/mobile/image-grid-1@2x.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 320px;
+    margin-bottom: 25px;
+}
+
+.section_secondary__title,
+.section_third__title {
+    font-size: var(--mobile-font-size-heading_l);
+    line-height: var(--mobile-line-height-heading_l);
+}
+
+.section_secondary__title {
+    margin-bottom: 21px;
+}
+
+.section_secondary__text {
+    line-height: var(--mobile-line-height-body_m);
+}
+
+.section_third {
+    margin-bottom: 120px;
+}
+
+.section_third__description {
+    background-color: var(--almost-black-color);
+    width: 100%;
+    height: 293px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section_third__description-container {
+    width: 295px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.section_third__background-img-one {
+    background-image: url(../assets/mobile/image-grid-2@2x.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 480px;
+    margin-bottom: 16px;
+}
+
+.section_third__background-img-two {
+    background-image: url(../assets/mobile/image-grid-3@2x.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 16px;
+}
+
+.section_third__title {
+    margin-bottom: 24px;
+    color: var(--white-color);
+}
+
+.section_third__text {
+    color: var(--white-color);
+    line-height: var(--mobile-line-height-body_m);
+}
+
+.footer {
+    width: 100%;
+    height: 336px;
+    background-color: var(--almost-black-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer__container {
+    width: 311px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.footer__container img,
+.footer__text {
+    margin-bottom: 38px;
+}
+
+.footer__text {
+    font-size: var(--mobile-font-size-body_s);
+    line-height: var(--mobile-line-height-body_s);
+    color: var(--white-color);
+}
+
+.footer__link {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100px;
+    height: auto;
+}
