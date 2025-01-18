@@ -24,6 +24,8 @@
     --desktop-font-size-body_m: 22px;
     --desktop-font-size-body_s: 18px;
 
+    --tablet-font-size-heading_xl: 70px;
+
     --mobile-font-size-heading_xl: 60px;
     --mobile-font-size-heading_l: 50px;
     --mobile-font-size-heading_m: 32px;
@@ -39,6 +41,8 @@
     --desktop-line-height-heading_s: 36px;
     --desktop-line-height-body_m: 32px;
     --desktop-line-height-body_s: 28px;
+
+    --tablet-line-height-heading_xl: 65px;
 
     --mobile-line-height-heading_xl: 55px;
     --mobile-line-height-heading_l: 45px;
