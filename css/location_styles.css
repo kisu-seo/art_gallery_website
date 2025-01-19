@@ -38,7 +38,8 @@ body {
     width: 56px;
 }
 
-.section_top__link {
+.section_top__link-text {
+    font-family: var(--big-shoulders-display-font);
     align-items: center;
     background-color: var(--almost-black-color);
     color: var(--white-color);
@@ -50,6 +51,7 @@ body {
     letter-spacing: var(--link-letter-spacing);
     line-height: var(--link-line-height);
     width: 204px;
+    text-transform: uppercase;
 }
 
 /* Section Secondary */
@@ -282,5 +284,17 @@ svg path {
         font-size: var(--desktop-font-size-body_s);
         line-height: var(--desktop-line-height-body_s);
         width: 430px;
+    }
+
+    .section_top__container:hover .section_top__link-text {
+        background-color: var(--gold-color);
+    }
+
+    .section_top__container:hover .section_top__arrow {
+        background-color: var(--almost-black-color);
+    }
+
+    svg:hover path {
+        fill: var(--white-color);
     }
 }
